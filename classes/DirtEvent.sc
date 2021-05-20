@@ -74,6 +74,7 @@ DirtEvent {
 			avgSpeed = speed.abs;
 		} {
 			endSpeed = speed * (1.0 + accelerate);
+			if(endSpeed.sign != speed.sign) { endSpeed = 0.0 };
 			avgSpeed = speed.abs + endSpeed.abs * 0.5;
 		};
 
@@ -193,4 +194,3 @@ DirtEvent {
 
 
 }
-
